@@ -49,9 +49,9 @@ int main()
         cudaEventDestroy(start);
         cudaEventDestroy(stop);
 
-
+	printf("%f ms\n",elapsedTime);
 	cudaMemcpy( host, device, N * sizeof( int64_t ), cudaMemcpyDeviceToHost );
-#if 1
+#if 0
 	for (int i = 0; i < N; i++){
 		printf("%ld, %d\n", host[i], i);
 	}
